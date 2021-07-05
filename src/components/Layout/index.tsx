@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
