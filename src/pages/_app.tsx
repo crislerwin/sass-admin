@@ -1,4 +1,4 @@
-import "../../styles/globals.scss";
+import "../../sass/globals.sass";
 import { AppProps } from "next/app";
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
