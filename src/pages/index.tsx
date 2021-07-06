@@ -1,9 +1,9 @@
 import styles from "../../styles/styles.module.sass";
-import Header from "../components/Header";
+import SellerInfo from "../components/SellerInfo";
 export default function IndexPage() {
   return (
     <>
-      <Header />
+      <SellerInfo />
     </>
   );
 }
