@@ -1,9 +1,10 @@
-import styles from "../../styles/styles.module.sass";
-import SellerInfo from "../components/SellerInfo";
+import React from "react";
+import Sidebar from "../components/Sidebar/Sidebar";
+
 export default function IndexPage() {
   return (
     <>
-      <SellerInfo />
+      <Sidebar />
     </>
   );
 }
