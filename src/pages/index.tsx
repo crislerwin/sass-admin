@@ -1,12 +1,12 @@
 import React from "react";
-import { Sidebar } from "../components/Sidebar";
-import { UserTable } from "../components/UserTable";
-
-export default function IndexPage() {
+import { Layout } from "../components/Layout";
+import { useSideBarContext } from "../hooks/UseSidebarContext";
+const IndexPage: React.FC<{}> = () => {
+  const { item } = useSideBarContext();
   return (
     <>
-      <Sidebar />
-      <UserTable />
+      <Layout>{item}</Layout>
     </>
   );
-}
+};
+export default IndexPage;
