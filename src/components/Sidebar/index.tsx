@@ -1,4 +1,4 @@
-export default function Sidebar() {
+export const Sidebar: React.FC<{}> = () => {
   return (
     <>
       <div className="area"></div>
@@ -71,4 +71,4 @@ export default function Sidebar() {
       </nav>
     </>
   );
-}
+};
