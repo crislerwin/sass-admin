@@ -1,13 +1,15 @@
+import { UserTable } from "../components/Tables";
 import Link from "next/link";
-const IndexPage: React.FC<{}> = () => {
+const Table: React.FC<{}> = () => {
   return (
     <>
       <div className="main-container">
         <Link href="/dashboard">
-          <a>Voltar para o Dashboard</a>
+          <a>Voltar</a>
         </Link>
       </div>
+      <UserTable />
     </>
   );
 };
-export default IndexPage;
+export default Table;

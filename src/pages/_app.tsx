@@ -1,4 +1,3 @@
-import "../styles/scss/bootstrap.scss";
 import "../styles/main.sass";
 import { SideProvider } from "../contexts/SideBarContext";
 import { AppProps } from "next/app";

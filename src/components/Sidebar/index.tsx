@@ -11,7 +11,6 @@ import {
   FaTable,
 } from "react-icons/fa";
 import { useSideBarContext } from "../../hooks/UseSidebarContext";
-import { UserTable } from "../Tables";
 import { Home } from "../Home";
 import { Register } from "../Register";
 import { Dashboard } from "../Dashboard";
@@ -21,12 +20,13 @@ import { Notes } from "../Notes";
 import { Maps } from "../Maps";
 import { Info } from "../Info";
 import Router from "next/router";
+
 const Hello = () => (
   <div className="table-container">
     <h1>Hello World</h1>
   </div>
 );
-export const Sidebar: React.FC<{}> = () => {
+export const Sidebar: React.FC<{}> = ({ children }) => {
   const { setItem } = useSideBarContext();
   return (
     <>
@@ -35,7 +35,6 @@ export const Sidebar: React.FC<{}> = () => {
         <ul>
           <li>
             <a
-              href="#"
               onClick={() => {
                 setItem(Home);
               }}
@@ -48,7 +47,6 @@ export const Sidebar: React.FC<{}> = () => {
           </li>
           <li className="has-subnav">
             <a
-              href="#"
               onClick={() => {
                 setItem(Register);
               }}
@@ -61,7 +59,6 @@ export const Sidebar: React.FC<{}> = () => {
           </li>
           <li className="has-subnav">
             <a
-              href="#"
               onClick={() => {
                 setItem(Dashboard);
               }}
@@ -74,7 +71,6 @@ export const Sidebar: React.FC<{}> = () => {
           </li>
           <li className="has-subnav">
             <a
-              href="#"
               onClick={() => {
                 setItem(Files);
               }}
@@ -87,7 +83,6 @@ export const Sidebar: React.FC<{}> = () => {
           </li>
           <li>
             <a
-              href="#"
               onClick={() => {
                 setItem(Graph);
               }}
@@ -100,7 +95,6 @@ export const Sidebar: React.FC<{}> = () => {
           </li>
           <li>
             <a
-              href="#"
               onClick={() => {
                 setItem(Notes);
               }}
@@ -112,12 +106,7 @@ export const Sidebar: React.FC<{}> = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#"
-              onClick={() => {
-                setItem(UserTable);
-              }}
-            >
+            <a onClick={() => Router.push("/table")}>
               <i className="fa  fa-2x">
                 <FaTable />
               </i>
@@ -126,7 +115,6 @@ export const Sidebar: React.FC<{}> = () => {
           </li>
           <li>
             <a
-              href="#"
               onClick={() => {
                 setItem(Maps);
               }}
@@ -139,7 +127,6 @@ export const Sidebar: React.FC<{}> = () => {
           </li>
           <li>
             <a
-              href="#"
               onClick={() => {
                 setItem(Info);
               }}
@@ -154,12 +141,7 @@ export const Sidebar: React.FC<{}> = () => {
 
         <ul className="logout">
           <li>
-            <a
-              href="#"
-              onClick={() => {
-                setItem(Info);
-              }}
-            >
+            <a onClick={() => Router.push("/")}>
               <i className="fa fa-2x">
                 <FaPowerOff />
               </i>
@@ -168,6 +150,7 @@ export const Sidebar: React.FC<{}> = () => {
           </li>
         </ul>
       </nav>
+      {children}
     </>
   );
 };

@@ -1,9 +1,9 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState } from "react";
 
 export const SideBarContext = createContext(null);
 
 export const SideProvider: React.FC<{}> = ({ children }) => {
-  const [item, setItem] = useState();
+  const [item, setItem] = useState<[]>();
   return (
     <SideBarContext.Provider
       value={{
