@@ -1,4 +1,5 @@
-import "../styles/main.sass";
+import "../styles/globals.sass";
+
 import { SideProvider } from "../contexts/SideBarContext";
 import { AppProps } from "next/app";
 function MyApp({ Component, pageProps }: AppProps) {

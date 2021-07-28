@@ -21,16 +21,10 @@ import { Maps } from "../Maps";
 import { Info } from "../Info";
 import Router from "next/router";
 
-const Hello = () => (
-  <div className="table-container">
-    <h1>Hello World</h1>
-  </div>
-);
 export const Sidebar: React.FC<{}> = ({ children }) => {
   const { setItem } = useSideBarContext();
   return (
     <>
-      <div className="area"></div>
       <nav className="main-menu">
         <ul>
           <li>
@@ -46,11 +40,7 @@ export const Sidebar: React.FC<{}> = ({ children }) => {
             </a>
           </li>
           <li className="has-subnav">
-            <a
-              onClick={() => {
-                setItem(Register);
-              }}
-            >
+            <a onClick={() => Router.push("/register")}>
               <i className="fa  fa-2x">
                 <FaLaptop />
               </i>
