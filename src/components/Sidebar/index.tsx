@@ -27,7 +27,7 @@ export const Sidebar: React.FC<{}> = ({ children }) => {
             </a>
           </li>
           <li className="has-subnav">
-            <a onClick={() => Router.push("/register")}>
+            <a>
               <i className="fa  fa-2x">
                 <FaLaptop />
               </i>
