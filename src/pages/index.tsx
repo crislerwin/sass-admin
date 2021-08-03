@@ -5,7 +5,7 @@ const Login: React.FC<{}> = () => {
     <>
       <div className="container">
         <div className="content">
-          <div className="title">Faça o login </div>
+          <div className="title">Login</div>
           <input type="text" placeholder="E-mail" />
           <input type="password" placeholder="Senha" />
           <input type="checkbox" id="rememberMe" />
