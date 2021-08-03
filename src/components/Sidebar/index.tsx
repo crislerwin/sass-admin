@@ -10,29 +10,16 @@ import {
   FaPowerOff,
   FaTable,
 } from "react-icons/fa";
-import { useSideBarContext } from "../../hooks/UseSidebarContext";
-import { Home } from "../Home";
-import { Register } from "../Register";
-import { Dashboard } from "../Dashboard";
-import { Files } from "../Files";
-import { Graph } from "../Graph";
-import { Notes } from "../Notes";
-import { Maps } from "../Maps";
-import { Info } from "../Info";
+
 import Router from "next/router";
 
 export const Sidebar: React.FC<{}> = ({ children }) => {
-  const { setItem } = useSideBarContext();
   return (
     <>
       <nav className="main-menu">
         <ul>
           <li>
-            <a
-              onClick={() => {
-                setItem(Home);
-              }}
-            >
+            <a>
               <i className="fa fa-2x">
                 <FaHome />
               </i>
@@ -48,11 +35,7 @@ export const Sidebar: React.FC<{}> = ({ children }) => {
             </a>
           </li>
           <li className="has-subnav">
-            <a
-              onClick={() => {
-                setItem(Dashboard);
-              }}
-            >
+            <a>
               <i className="fa  fa-2x">
                 <FaList />
               </i>
@@ -60,11 +43,7 @@ export const Sidebar: React.FC<{}> = ({ children }) => {
             </a>
           </li>
           <li className="has-subnav">
-            <a
-              onClick={() => {
-                setItem(Files);
-              }}
-            >
+            <a>
               <i className="fa  fa-2x">
                 <FaFolderOpen />
               </i>
@@ -72,11 +51,7 @@ export const Sidebar: React.FC<{}> = ({ children }) => {
             </a>
           </li>
           <li>
-            <a
-              onClick={() => {
-                setItem(Graph);
-              }}
-            >
+            <a>
               <i className="fa  fa-2x">
                 <FaChartBar />
               </i>
@@ -84,11 +59,7 @@ export const Sidebar: React.FC<{}> = ({ children }) => {
             </a>
           </li>
           <li>
-            <a
-              onClick={() => {
-                setItem(Notes);
-              }}
-            >
+            <a>
               <i className="fa  fa-2x">
                 <FaFont />
               </i>
@@ -96,7 +67,7 @@ export const Sidebar: React.FC<{}> = ({ children }) => {
             </a>
           </li>
           <li>
-            <a onClick={() => Router.push("/table")}>
+            <a>
               <i className="fa  fa-2x">
                 <FaTable />
               </i>
@@ -104,11 +75,7 @@ export const Sidebar: React.FC<{}> = ({ children }) => {
             </a>
           </li>
           <li>
-            <a
-              onClick={() => {
-                setItem(Maps);
-              }}
-            >
+            <a>
               <i className="fa  fa-2x">
                 <FaMapMarked />
               </i>
@@ -116,11 +83,7 @@ export const Sidebar: React.FC<{}> = ({ children }) => {
             </a>
           </li>
           <li>
-            <a
-              onClick={() => {
-                setItem(Info);
-              }}
-            >
+            <a>
               <i className="fa fa-2x">
                 <FaInfo />
               </i>
