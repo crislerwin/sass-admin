@@ -1,4 +1,4 @@
-import "../styles/globals.sass";
+import "../sass/globals.sass";
 
 import { SideProvider } from "../contexts/SideBarContext";
 import { AppProps } from "next/app";
